@@ -1,47 +1,37 @@
 {
-  "name": "@sagi.io/workers-pubsub",
-  "version": "0.0.15",
-  "description": "Google Pub/Sub API for Cloudflare Workers",
-  "author": "Sagi Kedmi <git@sagi.io> (https://sagi.io)",
-  "homepage": "https://sagi.io",
+  "name": "workers-pubsub",
+  "version": "1.0.0",
+  "description": "Fork of https://www.npmjs.com/package/@sagi.io/workers-pubsub",
   "main": "lib/index.js",
   "types": "index.d.ts",
   "license": "MIT",
   "private": false,
   "scripts": {
     "build:babel": "babel --ignore '**/*.test.js' --ignore testdata src -d lib --verbose",
-    "build": "yarn build:babel",
-    "prepublishOnly": "yarn test && yarn prettier:ci && yarn lint && yarn build",
-    "prettier:ci": "prettier --check ./src/*.js",
-    "coverage": "yarn build && yarn jest --coverage",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "lint": "yarn eslint ./src",
-    "test": "yarn jest"
+    "build": "npm run build:babel",
+    "prepublishOnly": "npm run lint && npm run build",
+    "lint": "eslint ./src",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "@sagi.io/globalthis": "^0.0.2",
     "@sagi.io/workers-jwt": "^0.0.21",
     "js-base64": "^3.7.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.16.11",
-    "coveralls": "^3.1.1",
-    "cross-fetch": "^3.1.5",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
-    "node-webcrypto-ossl": "^2.1.3",
     "prettier": "^2.5.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sagi/workers-pubsub.git"
-  },
-  "keywords": ["cloudflare", "workers", "cloudflare workers", "pubsub", "gcp", "google", "cloud"]
+    "url": "https://github.com/NejcZdovc/workers-pubsub"
+  }
 }

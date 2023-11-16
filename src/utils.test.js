@@ -45,15 +45,6 @@ describe('utils', () => {
     ).toEqual(expected2);
   });
 
-  test('setGlobals', () => {
-    const fetchImpl1 = null;
-    expect(() => utils.setGlobals(fetchImpl1)).toThrow();
-    expect(() => utils.setGlobals()).toThrow();
-    const fetchImpl2 = 'not null...';
-    utils.setGlobals(fetchImpl2);
-    expect(globalThis.fetch).toEqual(fetchImpl2);
-  });
-
   test('injectBaseInputs', () => {
     const fn1 = jest.fn();
     const fn2 = jest.fn();

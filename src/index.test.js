@@ -30,6 +30,5 @@ describe('index', () => {
       cryptoImpl: null,
       serviceAccountJSON,
     });
-    expect(utils.setGlobals).toHaveBeenCalled();
   });
 });
